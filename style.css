@@ -1,0 +1,73 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+.main {
+    padding: 20px;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px 0;
+}
+
+.tablink {
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 14px 20px;
+    font-size: 17px;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+.panel {
+    float: left;
+    width: 50%;
+}
+
+.kiri {
+    padding-right: 20px;
+}
+
+.kanan {
+    padding-left: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+.boxContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    width: 50px; /* Contoh ukuran, bisa disesuaikan */
+    height: 50px;
+    margin: 5px;
+    background-color: skyblue;
+}
