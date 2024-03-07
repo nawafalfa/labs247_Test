@@ -1,0 +1,9 @@
+Jawablah soal-soal berikut secara lengkap:
+1. Jelaskan perbedaan cookies dan local storage ? kapan menggunakan cookies / local storage ?
+2. Jelaskan bagaimana kamu mengamankan GUI dari serangan siber. Hal apa saja yang perlu diperhatikan
+?
+3. Apakah sebuah aplikasi front-end web dapat dijadikan aplikasi desktop / mobile ? Jelaskan.
+4. Misalkan pada sebuah website, terdapat sebuah div kecil A yang berada dalam div yang lebih besar B.
+Jelaskan bagaimana cara kamu menempatkan div A berada di tengah-tengah div B sehingga posisinya
+tepat di tengah secara vertikal. Apa saja yang perlu diperhatikan ?
+5. Sebutkan sebuah framework UI yang kamu sangat sukai, jelaskan mengapa kamu menyukainya

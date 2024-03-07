@@ -2,6 +2,9 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header, footer {
@@ -10,13 +13,25 @@ header, footer {
     text-align: center;
 }
 
-.main {
-    padding: 20px;
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tabs {
+    width: 80%;
+    max-width: 960px; 
+    margin: auto;
 }
 
 .tabcontent {
     display: none;
-    padding: 20px 0;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 20px;
 }
 
 .tablink {
@@ -26,6 +41,7 @@ header, footer {
     cursor: pointer;
     padding: 14px 20px;
     font-size: 17px;
+    margin-top: 20px;
 }
 
 .tablink:hover {
@@ -33,21 +49,20 @@ header, footer {
 }
 
 .panel {
-    float: left;
-    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.kiri {
-    padding-right: 20px;
-}
-
-.kanan {
-    padding-left: 20px;
+.kiri, .kanan {
+    width: 100%;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px; 
 }
 
 table, th, td {
@@ -63,11 +78,16 @@ th, td {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 20px; 
 }
 
 .box {
-    width: 50px; /* Contoh ukuran, bisa disesuaikan */
+    width: 50px;
     height: 50px;
     margin: 5px;
-    background-color: skyblue;
+    display: inline-block;
+    background-color: #f0f0f0;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #ddd;
 }

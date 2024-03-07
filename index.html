@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Single Page Application</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Application</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header>
-    <h1>Nama Kamu</h1>
-</header>
-<main>
-    <div class="tabs">
-        <button class="tablink" onclick="openTab(event, 'Kata')">Kata</button>
-        <button class="tablink" onclick="openTab(event, 'Kotak')">Kotak</button>
+    <header>
+        <h1>Nawaf Alfarizki</h1>
+    </header>
+    <main>
+        <div class="tabs">
+            <button class="tablink" onclick="openTab(event, 'Kata')">Kata</button>
+            <button class="tablink" onclick="openTab(event, 'Kotak')">Kotak</button>
 
-        <div id="Kata" class="tabcontent">
-            <div class="panel kiri">
-                <textarea id="textArea"></textarea>
-                <button onclick="processText()">Proses</button>
+            <div id="Kata" class="tabcontent">
+                <div class="panel kiri">
+                    <textarea id="textArea"></textarea> <br>
+                    <button onclick="processText()">Proses</button>
+                </div>
+                <div class="panel kanan">
+                    <table id="wordTable">
+                        <thead>
+                            <tr>
+                                <th>Kata</th>
+                                <th>Jumlah Kata</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="wordTableBody">
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <div class="panel kanan">
-                <table id="wordTable">
-                    <thead>
-                        <tr>
-                            <th>Kata</th>
-                            <th>Jumlah Kata</th>
-                            <th>Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Isi tabel akan ditambahkan di sini -->
-                    </tbody>
-                </table>
+
+            <div id="Kotak" class="tabcontent">
+                <input type="number" id="jumlahKotak" placeholder="Jumlah Kotak" max="10000">
+                <button onclick="generateBoxes()">Buat Kotak</button>
+                <div class="boxContainer"></div>
             </div>
         </div>
-
-        <div id="Kotak" class="tabcontent">
-            <input type="number" id="jumlahKotak" placeholder="Jumlah Kotak" max="10000">
-            <button onclick="generateBoxes()">Buat Kotak</button>
-            <div class="boxContainer"></div>
-        </div>
-    </div>
-</main>
-<footer>
-    <p>Tanggal Pengerjaan: DD/MM/YYYY</p>
-</footer>
-<script src="script.js"></script>
+    </main>
+    <footer>
+        <p>Tanggal Pengerjaan: 07 Maret 2024</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>
