@@ -1,9 +1,73 @@
 Jawablah soal-soal berikut secara lengkap:
+
 1. Jelaskan perbedaan cookies dan local storage ? kapan menggunakan cookies / local storage ?
-2. Jelaskan bagaimana kamu mengamankan GUI dari serangan siber. Hal apa saja yang perlu diperhatikan
-?
+
+Cookies adalah data kecil yang disimpan di browser pengguna oleh situs web untuk menyimpan informasi antar sesi pengguna. 
+Ukuran maksimalnya sekitar 4KB. Cookies dikirim ke server dengan setiap request HTTP, yang membuatnya berguna untuk mengautentikasi informasi pengguna atau menyimpan preferensi situs.
+Gunakan cookies ketika Anda perlu menyimpan informasi yang harus diakses oleh server atau ketika informasi tersebut perlu persisten antar sesi namun dengan data yang relatif kecil. 
+Cookies sangat berguna untuk manajemen sesi, tracking pengguna, dan personalisasi.
+
+Local Storage menyediakan ruang penyimpanan yang lebih besar (biasanya hingga 5MB atau lebih) di browser pengguna dan tidak mengirim data ke server dalam setiap request.
+Data yang disimpan di Local Storage persisten dan tidak memiliki tanggal kadaluwarsa. Data hanya dihapus melalui scripting atau penghapusan manual oleh pengguna.
+Gunakan Local Storage untuk menyimpan data yang lebih besar secara lokal di sisi klien tanpa mengirim data tersebut ke server setiap kali browser melakukan request. 
+Ini ideal untuk menyimpan preferensi pengguna, informasi state aplikasi, atau cache data untuk aplikasi web offline.
+
+2. Jelaskan bagaimana kamu mengamankan GUI dari serangan siber. Hal apa saja yang perlu diperhatikan?
+
+- Validasi Input:                   Lakukan validasi input baik di sisi klien (untuk UX yang responsif) dan di sisi server (untuk keamanan). Ini membantu mencegah serangan seperti SQL Injection dan Cross-site Scripting (XSS).
+
+- Content Security Policy (CSP):    Implementasikan CSP untuk mengurangi risiko serangan XSS dengan membatasi sumber daya yang boleh dimuat oleh aplikasi web.
+
+- HTTPS:                            Gunakan HTTPS untuk mengamankan komunikasi antara klien dan server, melindungi data pengguna dari penyadapan.
+
+- Token CSRF:                       Gunakan token CSRF untuk melindungi aplikasi web dari serangan Cross-Site Request Forgery.
+
+- Escape Output:                    Selalu escape output yang berasal dari input pengguna untuk mencegah eksekusi kode berbahaya di sisi klien.
+
+- Pembaruan dan Patch:              Terapkan pembaruan dan patch keamanan untuk semua framework dan library yang digunakan.
+
+
 3. Apakah sebuah aplikasi front-end web dapat dijadikan aplikasi desktop / mobile ? Jelaskan.
+
+Ya, sebuah aplikasi front-end web dapat dijadikan aplikasi desktop atau mobile dengan menggunakan teknologi tertentu:
+
+Desktop: Dengan menggunakan Electron atau NW.js, Anda dapat mengemas aplikasi web menjadi aplikasi desktop yang berjalan di berbagai sistem operasi (Windows, macOS, Linux) tanpa perlu mengubah kode sumber secara signifikan.
+Mobile: Framework seperti Cordova atau React Native memungkinkan pengembang untuk mengemas kode JavaScript, HTML, dan CSS menjadi aplikasi mobile yang dapat dijalankan di Android atau iOS. 
+React Native lebih lanjut memungkinkan pengembangan komponen UI dengan JavaScript yang di-render ke komponen asli platform.
+
 4. Misalkan pada sebuah website, terdapat sebuah div kecil A yang berada dalam div yang lebih besar B.
 Jelaskan bagaimana cara kamu menempatkan div A berada di tengah-tengah div B sehingga posisinya
 tepat di tengah secara vertikal. Apa saja yang perlu diperhatikan ?
+
+Untuk menempatkan div A di tengah-tengah div B secara vertikal, Anda dapat menggunakan teknik CSS berikut:
+
+grid :
+#divB {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Atau tinggi lain yang diinginkan */
+}
+
+
+flexbox : 
+#divB {
+    display: grid;
+    place-items: center;
+    height: 100px; /* Atau tinggi lain yang diinginkan */
+}
+
+Yang Perlu Diperhatikan:
+
+- Pastikan div B memiliki tinggi (height) yang ditetapkan atau cukup konten untuk menentukan tingginya.
+- Untuk metode flexbox, justify-content mengatur penyesuaian horizontal dan align-items untuk vertikal.
+- Dalam penggunaan grid, place-items: center; adalah cara cepat untuk mengatur item di tengah secara vertikal dan horizontal.
+- Periksa dukungan browser jika Anda menggunakan teknik CSS yang lebih baru seperti Flexbox dan Grid.
+
+
 5. Sebutkan sebuah framework UI yang kamu sangat sukai, jelaskan mengapa kamu menyukainya
+
+Saya menyukai nodeJS karena node.js memiliki ekosistem npm yang besar, memberikan akses ke ribuan library dan alat yang dapat mempercepat proses pengembangan web atau aplikasi.
+lalu nodeJS mempunyai ExpressJS yang dapat memudahkan pengaturan server web dengan menyediakan mekanisme sederhana untuk routing, middleware, dan handling request serta response.
+ExpressJS mempunyai struktur yang mudah dipahami, yang memungkinkan pengembang untuk membangun aplikasi yang efisien dan terorganisir tanpa membebani mereka dengan kode atau package berlebih. 
+Express juga mendukung banyak template engine yang memudahkan pengembangan aplikasi dengan menghasilkan HTML page secara dinamis di sisi server.
